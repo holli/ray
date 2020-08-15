@@ -72,6 +72,10 @@ if [[ $(flake8 --version) != *"flake8_quotes"* ]]; then
     echo "WARNING: Ray uses flake8 with flake8_quotes. Might error without it. Install with: pip install flake8-quotes"
 fi
 
+if [[ $(flake8 --version) != *"flake8_comprehensions"* ]]; then
+    echo "WARNING: Ray uses flake8 with flake8_comprehensions. Might error without it. Install with: pip install flake8-comprehensions"
+fi
+
 SHELLCHECK_FLAGS=(
   --exclude=1090  # "Can't follow non-constant source. Use a directive to specify location."
   --exclude=1091  # "Not following {file} due to some error"
